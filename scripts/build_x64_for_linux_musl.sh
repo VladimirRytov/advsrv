@@ -1,0 +1,6 @@
+#!/bin/bash
+
+trap "exit 1" ERR
+
+CC=musl-gcc GOARCH=amd64 go build -C ./cmd/advsrv/ -v -ldflags "-w -s -linkmode=external -X main.version=$2" -o $1
+echo "====> building for linux musl libs is done <===="

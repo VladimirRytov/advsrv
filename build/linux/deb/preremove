@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if $(systemctl -q is-active advsrv.service);
+then 
+  systemctl stop advsrv.service
+fi

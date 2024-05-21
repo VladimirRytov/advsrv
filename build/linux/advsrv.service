@@ -1,0 +1,15 @@
+[Unit]
+Description= Advertisementer Server
+After=network.target
+
+[Service]
+Type=simple
+User=advsrv
+Group=advsrv
+ExecStart=/usr/bin/advsrv start
+ExecReload=/usr/bin/advsrv reload
+ExecStop=/usr/bin/advsrv stop
+SyslogLevel=err
+
+[Install]
+WantedBy=multi-user.target

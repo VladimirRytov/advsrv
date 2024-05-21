@@ -1,0 +1,10 @@
+#!/bin/bash
+
+getent passwd advsrv || adduser --system --group advsrv
+
+if [ ! -f /etc/advsrv/config.yaml ];
+then 
+  touch /etc/advsrv/config.yaml
+  /usr/sbin/advsrv generate > /etc/advsrv/config.yaml
+  chown advsrv:advsrv /etc/advsrv/config.yaml
+fi
