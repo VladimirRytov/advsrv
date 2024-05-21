@@ -23,6 +23,6 @@ trap "exit 1" ERR
 create_icon
 mv ./*.syso ./cmd/advsrv/
 CC=x86_64-w64-mingw32-gcc PKG_CONFIG_PATH=/usr/x86_64-w64-mingw32/sys-root/mingw/lib/pkgconfig GOOS=windows GOARCH=amd64 \
-go build -C ./cmd/advsrv/ -v -ldflags "-w -s -linkmode=external -X main.version=$2" -o $1
+go build -C ./cmd/advsrv/ -v -ldflags "-w -s -linkmode=external -X github.com/VladimirRytov/advsrv/internal/front/cli/start.Version=$2" -o $1
 
 echo "====> building for windows is done <===="
