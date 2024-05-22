@@ -28,9 +28,9 @@ spec:
     - type: "Postgres" # Postgress, Mysql, Sql Server
       port: 5432
       adress: '127.0.0.1' 
-      dbName: 'gorm_test'
-      userName: 'gorm_test'
-      password: 'gorm_test'
+      dbName: ''
+      userName: ''
+      password: ''
 
 #    localDatabases:
 #    - type: 'Sqlite'
@@ -42,9 +42,9 @@ spec:
     - type: 'Postgres' # Postgress, Mysql, Sql Server
       port: 5432
       adress: '127.0.0.1' 
-      dbName: 'gorm_test'
-      userName: 'gorm_test'
-      password: 'gorm_test'  
+      dbName: ''
+      userName: ''
+      password: ''  
 #    localDatabases:
 #    - type: 'Sqlite'
 #      path: ''  
